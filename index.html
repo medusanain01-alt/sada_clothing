@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover thoughtful everyday style at SADA CLOTHING. Shop new arrivals, considered essentials, and special sale finds."
+    />
+    <title>SADA CLOTHING — Find your everyday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <p>Good things, made to be worn. Free shipping on qualifying orders.</p>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="SADA CLOTHING home">SADA<span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#new-arrivals">New arrivals</a>
+        <a href="#sale">Sale</a>
+        <a href="#others">The essentials</a>
+      </nav>
+      <div class="header-actions">
+        <button class="login-button" id="login-button" type="button">Log in</button>
+        <label class="search-box">
+          <span class="sr-only">Search products</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="search-input" type="search" placeholder="Search" autocomplete="off" />
+        </label>
+        <button class="bag-button" type="button" aria-label="Shopping bag, 0 items">
+          Bag <span id="bag-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2200&q=85"
+          alt="Friends walking together in relaxed everyday outfits"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow light-eyebrow">A little more you, every day</p>
+          <h1 id="hero-title">Wear what<br />feels like you.</h1>
+          <p>Easy pieces. Thoughtful details. A wardrobe that just works.</p>
+          <a class="button button-light" href="#new-arrivals">Explore the collection <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-index"><span>01</span><span class="index-line"></span><span>03</span></div>
+      </section>
+
+      <section class="shop-intro" aria-label="Shop SADA CLOTHING">
+        <p>Made for your days, and all the ones in between.</p>
+        <span>01 — 03</span>
+      </section>
+
+      <section class="collection-section" id="new-arrivals">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Just landed</p>
+            <h2>New arrivals</h2>
+          </div>
+          <a class="text-link" href="#new-arrivals">Shop new in <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="category-row" aria-label="Filter new arrivals">
+          <button class="filter-button active" type="button" data-filter="all">Everything</button>
+          <button class="filter-button" type="button" data-filter="Clothing">Clothing</button>
+          <button class="filter-button" type="button" data-filter="Accessories">Accessories</button>
+        </div>
+        <div class="product-grid" id="new-arrivals-grid"></div>
+      </section>
+
+      <section class="sale-banner" id="sale">
+        <div class="sale-copy">
+          <p class="eyebrow light-eyebrow">A good find feels even better</p>
+          <h2>Good style.<br />Better prices.</h2>
+          <p>Last-chance favourites, ready for a new home.</p>
+          <a class="button button-light" href="#sale-items">Shop the sale <span aria-hidden="true">→</span></a>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1500&q=85"
+          alt="A carefully styled neutral outfit"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="collection-section sale-products" id="sale-items">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A little treat</p>
+            <h2>Sale picks</h2>
+          </div>
+          <span class="subtle-note">Lovely things, for a little less.</span>
+        </div>
+        <div class="product-grid" id="sale-grid"></div>
+      </section>
+
+      <section class="essentials-section" id="others">
+        <div class="essentials-copy">
+          <p class="eyebrow">The pieces you reach for</p>
+          <h2>Everyday,<br />made easy.</h2>
+          <p>Meet the good-to-go layers and wear-on-repeat essentials that make getting dressed the easiest part of your day.</p>
+          <a class="text-link" href="#essentials-grid">Discover the essentials <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="essentials-products">
+          <div class="section-heading compact-heading">
+            <h3>More to love</h3>
+            <span class="subtle-note">The everyday edit</span>
+          </div>
+          <div class="product-grid" id="essentials-grid"></div>
+        </div>
+      </section>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <p class="eyebrow">A note from SADA</p>
+        <h2 id="newsletter-title">Good things in your inbox.</h2>
+        <p>New things, nice things, and the occasional little surprise.</p>
+        <form id="newsletter-form">
+          <label class="sr-only" for="newsletter-email">Your email address</label>
+          <input id="newsletter-email" type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe to newsletter">Join us <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="newsletter-message" id="newsletter-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#home">SADA<span>.</span></a>
+      <p>Find your everyday.</p>
+      <div class="footer-links"><a href="#new-arrivals">New arrivals</a><a href="#sale">Sale</a><a href="#others">Essentials</a></div>
+      <small>© <span id="current-year"></span> SADA CLOTHING</small>
+    </footer>
+    <dialog class="store-dialog" id="account-dialog" aria-labelledby="account-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">Welcome to SADA</p>
+          <h2 id="account-title">Log in</h2>
+        </div>
+        <button class="dialog-close" type="button" aria-label="Close dialog" data-close-dialog>×</button>
+      </div>
+      <div id="account-content">
+        <form class="dialog-form" id="account-form">
+          <label>
+            Username
+            <input id="account-username" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Password
+            <input id="account-password" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <p class="form-note">Browse and add items to your bag as a guest. Sign in when you are ready to order.</p>
+          <p class="demo-note">Demo accounts: admin / admin123 · ami / ami123. These browser-only logins are not secure for real use.</p>
+          <p class="login-error" id="login-error" role="alert" hidden>That username or password isn't recognized.</p>
+          <button class="dialog-primary" id="account-submit" type="submit">Log in</button>
+        </form>
+        <div class="account-status" id="account-status" hidden>
+          <p id="account-greeting"></p>
+          <button class="dialog-secondary" id="logout-button" type="button">Log out</button>
+        </div>
+        <section class="admin-dashboard" id="admin-dashboard" hidden aria-label="Admin dashboard">
+          <div class="admin-summary">
+            <div><span id="admin-product-count">0</span><small>Products</small></div>
+            <div><span id="admin-order-count">0</span><small>Demo orders</small></div>
+          </div>
+          <div class="admin-tabs" role="tablist" aria-label="Admin management">
+            <button class="admin-tab active" type="button" role="tab" aria-selected="true" data-admin-tab="products">Products</button>
+            <button class="admin-tab" type="button" role="tab" aria-selected="false" data-admin-tab="orders">Orders</button>
+          </div>
+          <form class="admin-add-form" id="admin-add-form">
+            <h3>Add a product</h3>
+            <div class="admin-add-fields">
+              <label>Product name<input name="name" maxlength="80" required /></label>
+              <label>Price<input name="price" type="number" min="0.01" step="0.01" required /></label>
+              <label>Category
+                <select name="category" required>
+                  <option value="Clothing">Clothing</option>
+                  <option value="Accessories">Accessories</option>
+                </select>
+              </label>
+              <label>Section
+                <select name="section" required>
+                  <option value="new">New Arrivals</option>
+                  <option value="sale">Sale</option>
+                  <option value="essentials">Essentials</option>
+                </select>
+              </label>
+              <label class="admin-image-field">Product image URL
+                <input id="admin-image-url" name="image" type="url" placeholder="https://example.com/image.jpg" />
+              </label>
+              <label class="admin-image-field">Or upload an image
+                <input id="admin-image-file" name="imageFile" type="file" accept="image/*" />
+              </label>
+            </div>
+            <p class="admin-image-help">Choose a URL or upload a file. Uploaded images are resized and saved in this browser.</p>
+            <img class="admin-image-preview" id="admin-image-preview" alt="Product image preview" hidden />
+            <button class="dialog-primary" type="submit">Add product</button>
+            <p class="login-error" id="admin-product-error" role="alert" hidden></p>
+          </form>
+          <div class="admin-panel" id="admin-panel"></div>
+          <p class="demo-note">Demo admin tools: changes are stored in this browser only. Orders and inventory are not shared with a server.</p>
+          <button class="dialog-secondary" id="admin-logout-button" type="button">Log out</button>
+        </section>
+      </div>
+    </dialog>
+    <dialog class="store-dialog order-dialog" id="order-dialog" aria-labelledby="order-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">Your SADA selection</p>
+          <h2 id="order-title">Your bag</h2>
+        </div>
+        <button class="dialog-close" type="button" aria-label="Close dialog" data-close-dialog>×</button>
+      </div>
+      <div id="order-content"></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
